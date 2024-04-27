@@ -1,8 +1,0 @@
-# .gitignore for ROS/catkin workspace
-build/
-devel/
-logs/
-*.pyc
-*.swp
-*~
-

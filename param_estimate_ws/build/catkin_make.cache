@@ -1,0 +1,2 @@
+alphabot2-simulator/alphabot2_camera:alphabot2-simulator/alphabot2_control:alphabot2-simulator/alphabot2_pantilt:alphabot2-simulator/alphabot2_sensors:alphabot2-simulator/alphabot2_sensors_middleman:alphabot2-simulator/alphabot2_world:parameters_est:raspicam_node
+-DCATKIN_DEVEL_PREFIX=/home/moth/Documents/Marker-Based-FastSlam/param_estimate_ws/devel -DCMAKE_INSTALL_PREFIX=/home/moth/Documents/Marker-Based-FastSlam/param_estimate_ws/install -G Unix Makefiles

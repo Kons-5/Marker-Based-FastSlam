@@ -1,0 +1,9 @@
+<launch>
+  <node 
+    pkg="parameters_est" 
+    type="parameter_estimator.py" 
+    name="parameter_estimator_node" 
+    ns="/alphabot2" 
+    output="screen" 
+    launch-prefix="xterm -e" />
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/moth/Documents/Marker-Based-FastSlam/param_estimate_ws/install
+
+Name: alphabot2_pantilt
+Description: Description of alphabot2_pantilt
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

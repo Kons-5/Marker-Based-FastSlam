@@ -383,7 +383,7 @@ void FiducialsNode::imageCallback(const sensor_msgs::ImageConstPtr & msg)
         }
 
         if (publish_images) {
-            image_pub.publish(cv_ptr->toImageMsg());
+           image_pub.publish(cv_ptr->toImageMsg());
         }
     }
     catch(cv_bridge::Exception & e) {
@@ -428,13 +428,13 @@ void FiducialsNode::poseEstimateCallback(const FiducialArrayConstPtr & msg)
                                       reprojectionError);
 
             for (size_t i=0; i<ids.size(); i++) {
-                aruco::drawAxis(cv_ptr->image, cameraMatrix, distortionCoeffs,
+                cv::drawFrameAxes(cv_ptr->image, cameraMatrix, distortionCoeffs,
                                 rvecs[i], tvecs[i], (float)fiducial_len);
                 if(verbose){
                     ROS_INFO("Detected id %d T %.2f %.2f %.2f R %.2f %.2f %.2f", ids[i],
                          tvecs[i][0], tvecs[i][1], tvecs[i][2],
                          rvecs[i][0], rvecs[i][1], rvecs[i][2]);
-
+                  
                 }
 
                 if (std::count(ignoreIds.begin(), ignoreIds.end(), ids[i]) != 0) {

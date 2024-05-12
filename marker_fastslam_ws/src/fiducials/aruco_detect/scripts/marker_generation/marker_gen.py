@@ -85,8 +85,8 @@ def genMarker(i, dicno, paper_size):
     img = aruco.drawMarker(aruco_dict, i, int(2000))
     cv2.imwrite("/tmp/marker%d.png" % i, img)
     svg = genSvg(i, dicno, paper_size)
-    cairosvg.svg2pdf(bytestring=svg, write_to='/tmp/marker%d.pdf' % i)
+    # cairosvg.svg2pdf(bytestring=svg, write_to='/tmp/marker%d.pdf' % i)
     # Old slower method using subprocess for SVG to PDF conversion
-    # cairo = subprocess.Popen(('cairosvg', '-f', 'pdf', '-o', '/tmp/marker%d.pdf' % i, '/dev/stdin'), stdin=subprocess.PIPE)
-    # cairo.communicate(input=bytes(svg, 'utf-8'))
+    cairo = subprocess.Popen(('cairosvg', '-f', 'pdf', '-o', '/tmp/marker%d.pdf' % i, '/dev/stdin'), stdin=subprocess.PIPE)
+    cairo.communicate(input=bytes(svg, 'utf-8'))
     os.remove("/tmp/marker%d.png" % i)

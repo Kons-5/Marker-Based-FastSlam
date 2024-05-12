@@ -10,6 +10,10 @@ project(feature_extractor)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
+  sensor_msgs
+  cv_bridge
+  image_transport
+  OpenCV
 )
 
 ## System dependencies are found with CMake's conventions
@@ -118,6 +122,9 @@ include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
 )
+
+add_executable(ORB_extractor src/ORB_extractor.cpp)
+target_link_libraries(ORB_extractor ${catkin_LIBRARIES})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

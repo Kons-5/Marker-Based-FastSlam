@@ -9,7 +9,7 @@ marker_fastslam_ws/logs/
 marker_fastslam_ws/**/*.pyc
 
 # Ignore Vim swap files within the workspace
-marker_fastslam_ws/**/*.*
+# marker_fastslam_ws/**/*.*
 
 # Ignore backup files created by text editors within the workspace
-marker_fastslam_ws/**/*~
+# marker_fastslam_ws/**/*~

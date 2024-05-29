@@ -79,7 +79,7 @@ Eigen::Matrix4d ParticleFilter::quaternion_mult_matrix(const Eigen::Quaterniond&
 }
 
 // Computes the transform from the camera's coordinate frame to the global coordinate frame
-Eigen::Matrix<double, 7, 1> ParticleFilter::transform_to_global(const Eigen::Matrix<double, 7, 1>& particle, const Eigen::Matrix<double, 7, 1>& landmark, double pan, const double tilt) {
+Eigen::Matrix<double, 7, 1> ParticleFilter::transform_to_global(const Eigen::Matrix<double, 7, 1>& particle, const Eigen::Matrix<double, 7, 1>& landmark, const double pan, const double tilt) {
     // Robot orientation rotation matrix
     Eigen::Matrix<double, 7, 7> A = Eigen::Matrix<double, 7, 7>::Zero();
     Eigen::Quaterniond q_robot(particle[3], particle[4], particle[5], particle[6]);

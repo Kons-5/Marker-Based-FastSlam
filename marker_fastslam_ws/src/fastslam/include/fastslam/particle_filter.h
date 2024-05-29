@@ -44,7 +44,7 @@ private:
     std::vector<Particle> particles;
     double get_yaw(const Eigen::Quaterniond& q);
     Eigen::Matrix4d quaternion_mult_matrix(const Eigen::Quaterniond& q);
-    Eigen::Matrix<double, 7, 1> transform_to_global(const Eigen::Matrix<double, 7, 1>& particle, const Eigen::Matrix<double, 7, 1>& landmark, double pan, const double tilt);
+    Eigen::Matrix<double, 7, 1> transform_to_global(const Eigen::Matrix<double, 7, 1>& particle, const Eigen::Matrix<double, 7, 1>& landmark, const double pan, const double tilt);
     Eigen::Matrix<double, 7, 1> measurement_function(const Eigen::Matrix<double, 7, 1>& particle, const Eigen::Matrix<double, 7, 1>& landmark, const double pan, const double tilt);
     Eigen::Matrix<double, 7, 7> compute_jacobian(const Eigen::Matrix<double, 7, 1>& particle, const double pan, const double tilt);
 };

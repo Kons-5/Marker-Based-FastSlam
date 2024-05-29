@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
     particle_filter.init();
 
     // Subscribe and create publishers for all relevant topics
-    ros::Subscriber sub1 = nh.subscribe("/alphabot2/control", MAX_SUBSCRIBER_QUEUE_SIZE, motion_callback);
+    ros::Subscriber sub1 = nh.subscribe("/cmd_vel", MAX_SUBSCRIBER_QUEUE_SIZE, motion_callback);
     ros::Subscriber sub2 = nh.subscribe("/pan_tilt", MAX_SUBSCRIBER_QUEUE_SIZE, pantilt_callback);
     ros::Subscriber sub3 = nh.subscribe("/fiducial_transforms", MAX_SUBSCRIBER_QUEUE_SIZE, observ_callback);
 

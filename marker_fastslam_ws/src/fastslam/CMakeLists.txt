@@ -10,13 +10,14 @@ find_package(catkin REQUIRED COMPONENTS
   tf2
   tf2_ros
   tf2_geometry_msgs
+  waveshare_alphabot2
 )
 
 ## Declare a catkin package
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES fastslam
-  CATKIN_DEPENDS roscpp std_msgs geometry_msgs fiducial_msgs tf2 tf2_ros tf2_geometry_msgs
+  CATKIN_DEPENDS roscpp std_msgs geometry_msgs fiducial_msgs tf2 tf2_ros tf2_geometry_msgs waveshare_alphabot2
 )
 
 ## Specify additional locations of header files

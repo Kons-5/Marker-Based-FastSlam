@@ -1,4 +1,0 @@
-<launch>
-  <node pkg="web_control" type="main.py" name="web_control_node" output="screen">
-  </node>
-</launch>

@@ -1,8 +1,0 @@
-prefix=/home/moth/Documents/Marker-Based-FastSlam/param_estimate_ws/devel
-
-Name: alphabot2_camera
-Description: Description of alphabot2_camera
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

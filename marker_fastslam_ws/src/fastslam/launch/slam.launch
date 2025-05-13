@@ -1,3 +1,0 @@
-<launch>
-    <node name="slam_node" pkg="fastslam" type="slam_node" output="screen"/>
-</launch>
